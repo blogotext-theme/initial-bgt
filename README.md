@@ -1,4 +1,4 @@
-initial-bgt
-===========
+Initial
+=====
 
-Basic theme for blogotext
+Theme Initial for Blogotext

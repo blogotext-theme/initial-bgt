@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8" />
+	<title>{blog_nom}</title>
+	<meta name="generator" content="BlogoText" />
+	<meta name="robots" content="all" />
+	<meta name="author" content="{blog_auteur}" />
+	<meta name="description" content="{blog_description}" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="keywords" content="{keywords}" />
+	<link rel="icon" type="image/png" href="{style}/images/favicon.png" />
+	<link rel="apple-touch-icon" href="{style}/images/apple-touch-icon.png">
+	<link rel="canonical" href="{racine_du_site}" />
+	<link rel="image_src" href="{style}/images/apple-touch-icon.png" />
+	<meta itemprop="name" content="{article_titre}" />
+	<meta itemprop="description" content="{article_chapo}" />
+	<meta itemprop="image" content="{style}/images/apple-touch-icon.png">
+	<meta property="og:title" content="{blog_nom}" />
+	<meta property="og:url" content="{racine_du_site}" />
+	<meta property="og:description" content="{blog_description}" />
+	<meta property="og:site_name" content="{blog_nom}" />
+	<meta property="og:locale" content="fr_FR" />
+	<meta property="og:image" content="{style}/images/apple-touch-icon.png" />
+	<link type="text/css" rel="stylesheet" href="{style}/style.css" />
+	<link type="application/rss+xml" rel="alternate" title="RSS 2.0 - Articles" href="{rss}" />
+</head>
+<body id="pagewrap">
+	<header id="top">
+		<div id="top_text">
+			<h1><a href="{racine_du_site}" title="{blog_nom}"><!--img src="{style}/images/apple-touch-icon.png" alt="logo"/-->{blog_nom}</a></h1>
+			<h2>{blog_description}</h2>
+		</div>
+	</header>
+	<div id="wrapper">
+		<section id="contenu">
+			{BOUCLE_posts}
+				// ici il s'affichera ce qu'on veut : un article, un commentaire, un lien sauvé…
+				// les thèmes pour ces choses sont dans le dossier "template"
+				// chaque "objet" (lien, article, …) dispose de son propre formatage. 
+				// **** le texte que vous mettez ici (dans la "boucle") ne sera pas éxécuté ni affiché. ****
+			{/BOUCLE_posts}
+			{pagination}
+		</section>
+		<aside id="sidebar">
+			<nav id="recherche">
+				<h3>Recherche</h3>
+				{recherche}
+				<hr/>
+			</nav>
+			<nav id="navigate">
+				<h3>Calendrier</h3>
+				{calendrier}
+				<hr/>
+			</nav>
+			<nav id="last_comments">
+				<h3>Derniers commentaires</h3>
+				{commentaires_encart}
+				<hr/>
+			</nav>
+			<nav id="tags">
+				<h3>Tags</h3>
+				{categories_encart}
+				<hr/>
+			</nav>
+			<nav id="liens">
+				<h3>Autres</h3>
+				<ul>
+					<li><a href="index.php" title="Blog">Blog</a></li>
+					<li><a href="index.php?mode=links" title="Liens">Liens</a></li>
+					<li><a href="index.php?mode=comments" title="Derniers commentaires">Derniers commentaires</a></li>
+				</ul>
+				<hr/>
+			</nav>
+			<nav id="random">
+				<h3>Un article au hasard</h3>
+					<ul>
+						<li><a href="?random" title="Un article au hasard ?">Un article au hasard ?</a></li>
+					</ul>
+				<hr/>
+			</nav>
+			<nav id="rss">
+				<h3>Fils RSS</h3>
+				<ul>
+					<li><a href="rss.php" title="RSS Blog">RSS : Blog</a></li>
+					<li><a href="rss.php?full" title="RSS Blog (articles complets)">RSS : Blog (articles complets)</a></li>
+				</ul>
+				<hr/>
+			</nav>
+		</aside>
+		<br class="clearfix "/>
+	</div> 
+	<footer><b>{blog_auteur}</b>, tout droits réservés – Publié avec <a href="http://lehollandaisvolant.net/blogotext/" title=" Site officiel de BlogoText">BlogoText</a> – Thème par <a href="http://www.xoofoo.org" title="Site internet de Kris">Kris</a></footer>
+	<script type="text/javascript" src="{style}/js/initial-bgt.js"></script>
+	<link type="text/css" rel="stylesheet" href="{style}/css/editor.css" />
+</body>
+</html>
