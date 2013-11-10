@@ -1,4 +1,0 @@
-﻿/* Crédits */
-- Timo van Neerden (http://lehollandaisvolant.net/blogotext/fr/)
-- Knacss (http://www.knacss.com)
-- Foundation (http://foundation.zurb.com)
